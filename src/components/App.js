@@ -5,24 +5,36 @@ import CharactersList from "./CharactersList";
 import Filters from "./Filters";
 
 function App() {
-  const [selectHouse, setSelectHouse] = useState("griffindor");
+  const [filterName, setFilterName] = useState('');
+  const [filterHouse, setFilterHouse] = useState("griffindor");
   const [characters, setCharacters] = useState([]);
 
+  // Llamamos a callToApi
   useEffect(() => {
     callToApi().then((charactersData) => {
       setCharacters(charactersData);
     });
   }, []);
 
+  // Función que ejecuta setFilterName. Ésta recibe como parámetro un valor, el cual mete a la variable de estado filterName
+  const handleFilterName = (info) => {
+    setFilterName(info)
+  }
+
+  // Filtro del input
+  const filteredCharacters = characters.filter((eachPerson) => {
+    return eachPerson.name.toLowerCase().includes(filterName.toLowerCase());
+  });
+
   return (
     <div>
       <header>
         <h1>Harry Potter</h1>
-        <Filters />
+        <Filters handleFilterName={handleFilterName} />
       </header>
 
       <main>
-        <CharactersList characters={characters} />
+        <CharactersList characters={filteredCharacters} />
       </main>
       <footer>
         <p>Made with ✨🔮 and ❤️, by the wizard María</p>

@@ -3,12 +3,12 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 
-const Filters = () => {
+const Filters = (props) => {
     return (
         <section>
 
           <form>
-            <FilterName />
+            <FilterName handleFilterName={props.handleFilterName} />
             <FilterHouse />
           </form>
           
