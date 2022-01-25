@@ -1,45 +1,28 @@
-import '../styles/App.css';
-import { useState, useEffect } from 'react';
+import "../styles/App.css";
+import { useState, useEffect } from "react";
+import callToApi from "../services/api";
+import CharactersList from "./CharactersList";
+import Filters from "./Filters";
 
 function App() {
+  const [selectHouse, setSelectHouse] = useState("griffindor");
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    callToApi().then((charactersData) => {
+      setCharacters(charactersData);
+    });
+  }, []);
 
   return (
     <div>
-
       <header>
         <h1>Harry Potter</h1>
-        <form>
-          <label htmlFor="name">Busca por personaje:</label>
-          <input 
-          type="text"
-          name="name"
-          id="name"
-          />
-        </form>
-
-        <label htmlFor="select">Selecciona la casa</label>
-        <select name="select" id="select">
-          <option value="griffindor">Griffindor</option>
-          <option value="ravenclaw">Ravenclaw</option>
-          <option value="hufflepuff">Hufflepuff</option>
-          <option value="slytherin">Slytherin</option>
-        </select>
+        <Filters />
       </header>
 
       <main>
-        <section>
-          <ul>
-            <li>
-              <img 
-              src="#" 
-              alt="Foto de Harry Potter" 
-              title="Foto de Harry Potter" 
-              />
-              <h1>Harry Potter</h1>
-              <p>Humano</p>
-            </li>
-          </ul>
-        </section>
+        <CharactersList characters={characters} />
       </main>
       <footer>
         <p>Made with ✨🔮 and ❤️, by the wizard María</p>
