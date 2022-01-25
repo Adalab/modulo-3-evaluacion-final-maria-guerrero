@@ -1,5 +1,7 @@
-import "../styles/App.css";
+import "../styles/App.scss";
+import img from '../images/logo.png';
 import { useState, useEffect } from "react";
+import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import callToApi from "../services/api";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
@@ -32,30 +34,24 @@ function App() {
     return eachPerson.name.toLowerCase()
     .includes(filterName.toLowerCase());
   })
-    .filter((eachPerson) => {
-      return filterHouse === 'gryffindor' ? true : eachPerson.house === filterHouse;
-      /* if(filterHouse === 'gryffindor') {
-        return true;
-      }
-      else {
-        return eachPerson.house === filterHouse;
-      } */
-    });
+    
 
   return (
     <div>
-      <header>
-        <h1>Harry Potter</h1>
-        <Filters 
-        handleFilter={handleFilter} 
-        filterName={filterName}
-        filterHouse={filterHouse} 
-        />
-      </header>
+      <header className="header">
+        <img className="logo" src={img} alt="" />
+            <Filters 
+            handleFilter={handleFilter} 
+            filterName={filterName}
+            filterHouse={filterHouse} 
+            />
+          
+        </header>
 
-      <main>
-        <CharactersList characters={filteredCharacters} />
-      </main>
+        <main className="main">
+          <CharactersList characters={filteredCharacters} />
+        </main>     
+
       <footer>
         <p>Made with ✨🔮 and ❤️, by &copy;María the wizard. 2022</p>
       </footer>

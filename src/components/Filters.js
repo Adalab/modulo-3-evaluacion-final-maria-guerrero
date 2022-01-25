@@ -7,7 +7,7 @@ const Filters = (props) => {
     return (
         <section>
 
-          <form>
+          <form className="formHeader">
             <FilterName 
             handleFilter={props.handleFilter} 
             filterName={props.filterName} 

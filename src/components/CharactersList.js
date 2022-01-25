@@ -6,14 +6,14 @@ const CharactersList = (props) => {
 
     const charactersElement = props.characters.map((person, index) => {
         return (
-            <li key={index}>
+            <li className="card" key={index}>
                 <Characters person={person} />
             </li>
         );
     });
 
     return (
-        <section>
+        <section className="sectionCards">
           <ul className="cards">
               {charactersElement}
           </ul>

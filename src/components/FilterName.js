@@ -10,7 +10,8 @@ const FilterName = (props) => {
     return (
         <>
             <label htmlFor="name">Busca por personaje:</label>
-            <input 
+            <input
+            className="backgroundInput" 
             type="text" 
             name="name" 
             id="name"

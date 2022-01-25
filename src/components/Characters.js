@@ -7,14 +7,16 @@ const Characters = (props) => {
 
   return (
     <>
-    <a href="#"></a>
-      <img 
-      src={props.person.image} 
-      alt={`Foto de ${props.person.name}`}
-      title={`Foto de ${props.person.name}`}
-      />
-      <h1>{props.person.name}</h1>
-      <p>{props.person.species}</p>
+        <img
+        className="imageStyles" 
+        src={props.person.image} 
+        alt={`Foto de ${props.person.name}`}
+        title={`Foto de ${props.person.name}`}
+        />
+        <div className="divTitleName">
+          <h1 className="nameTitle">{props.person.name}</h1>
+          <p className="specieTitle">{props.person.species}</p>
+        </div>
     </>
   );
 };
