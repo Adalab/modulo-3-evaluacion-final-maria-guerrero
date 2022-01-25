@@ -8,8 +8,14 @@ const Filters = (props) => {
         <section>
 
           <form>
-            <FilterName handleFilterName={props.handleFilterName} />
-            <FilterHouse />
+            <FilterName 
+            handleFilter={props.handleFilter} 
+            filterName={props.filterName} 
+            />
+            <FilterHouse
+            handleFilter={props.handleFilter}
+            filterHouse={props.filterHouse}
+            />
           </form>
           
         </section>
