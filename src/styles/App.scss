@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400&family=Qwitcher+Grypen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400&family=Lateef&family=Qwitcher+Grypen&display=swap');
 
 * {
     margin: 0;
@@ -6,56 +6,69 @@
     box-sizing: border-box;
 }
 .header {
+    height: 40vh;
     background: url('../images/hogwarts-illus.jpg');
     background-position-x: center;
+    background-position-y: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
         @media (min-width: 768px) {
-            background: url('../images/hogwarts-illus-tablet.jpg');
-            background-size: cover;
-            background-position-y: center;
+            height: 50vh;
         }
         @media (min-width: 1200px) {
-            padding: 90px;
-            background: url('../images/hogwarts-illus-pc.jpg');
             background-size: cover;
-            background-position-y: bottom;
+            height: 80vh;
+            background-position-y: center;
         }
-}
-    .formHeader{
-        width: 50vw;
-        color: white;
+    }
+    .main {
+        background: linear-gradient(to bottom, #1a100d 0%, #94593db4 100%);;
+    }
+    
+    .sectionOne{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: 'Arima Madurai', cursive;
+        margin-bottom: 30px;
+        padding: 30px;
     }
+        .formInputSelect{
+            width: 50vw;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arima Madurai', cursive;
+        }
     .logo {
-        width: 250px;
+        width: 300px;
             @media (min-width: 768px) {
                 width: 350px;
             }
+            @media (min-width: 1200px) {
+                width: 550px;
+            }
     }
     .inputTitleStyles{
-        margin-top: 25px;
             @media (min-width: 1200px) {
                 font-size: 22px;
             }
     }
     .backgroundInput {
         background: transparent;
+        box-shadow: 0px 0px 10px rgba(194, 139, 139, 0.774);
         width: 60vw;
         margin-top: 10px;
         color: white;
         padding: 10px;
-        border: none;
-        border: rgba(255, 255, 255, 0.37) 2px solid;
+        border: rgba(194, 139, 139, 0.774) 2px solid;
         border-radius: 10px;
         margin-bottom: 13px;
             @media (min-width: 768px) {
@@ -63,7 +76,7 @@
             }
             @media (min-width: 1200px) {
                 width: 27vw;
-                padding: 20px;
+                padding: 16px;
             }
     }
 
@@ -95,46 +108,54 @@
     }
 
 .sectionCards {
-    background: url('../images/solid-colored.jpg');
     background-size: cover;
     background-repeat: repeat-y;
     color: black;
     text-transform: uppercase;
+    padding: 40px;
         @media (min-width: 768px) {
-            background: url('../images/solid-colored-tablet.jpg');
             background-size: cover;
-            padding: 40px;
+            padding: 20px;
         }
-        @media (min-width: 768px) {
-            background: url('../images/solid-colored-pc.jpg');
+        @media (min-width: 1200px) {
             background-size: cover;
         }    
 }
-    .cards {     
-        display: flex;
-        flex-wrap: wrap;
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
             @media (min-width: 768px) {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (min-width: 1200px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
             }
     }
     .card {
+        position: relative;
         background: url('../images/paper.png');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position-x: center;
-        padding: 15px;
-        margin: 10px;
+        padding: 50px 30px;
+        margin: 10px 10px 40px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         display: flex;
             @media (min-width: 768px) {
+               height: 50vh;
                 margin: 15px;
+            }
+            @media (min-width: 1200px) {
+                
+                padding: 50px 0 0 0;
             }
     }
     .divTitleName {
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -169,4 +190,50 @@
             width: 200px;
             height: 250px;
         }
+}
+
+.sectionDetailPage {
+    background: url('../images/paper-detail-y.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 470px;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arima Madurai', cursive;
+        @media (min-width: 768px) {
+            background: url('../images/paper-detail-x.png');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 400px;
+            height: 55vh;
+            background-size: 750px;
+        }
+        @media (min-width: 1200px) {
+            background: url('../images/paper-detail-x.png');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 80px;
+            height: 85vh;
+            background-size: 750px;
+        }
+}
+
+.back {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.349);
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Arima Madurai', cursive;
 }

@@ -5,9 +5,9 @@ import FilterHouse from "./FilterHouse";
 
 const Filters = (props) => {
     return (
-        <section>
+        <section className="sectionOne">
 
-          <form className="formHeader">
+          <form className="formInputSelect">
             <FilterName 
             handleFilter={props.handleFilter} 
             filterName={props.filterName} 

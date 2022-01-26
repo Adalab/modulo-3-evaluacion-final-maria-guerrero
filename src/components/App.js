@@ -46,28 +46,27 @@ function App() {
 
   return (
     <div>
-      <Switch>
-        <Route path="/" exact>
       <header className="header">
         <img className="logo" src={img} alt="" />
+      </header>
+
+      <main className="main">
+      <Switch>
+        <Route path="/" exact>
             <Filters 
             handleFilter={handleFilter} 
             filterName={filterName}
             filterHouse={filterHouse} 
-            />
-          
-        </header>
-
-        <main className="main">
+            />    
           <CharactersList characters={filteredCharacters} />
+          </Route>
+        <Route path="/character/:characterId" render={renderCharacterDetail} />
+      </Switch>
         </main>     
 
       <footer>
         <p>Made with ✨🔮 and ❤️, by &copy;María the wizard. 2022</p>
       </footer>
-        </Route>
-        <Route path="/character/:characterId" render={renderCharacterDetail} />
-      </Switch>
     </div>
   );
 }
