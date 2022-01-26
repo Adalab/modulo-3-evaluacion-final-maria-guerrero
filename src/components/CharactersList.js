@@ -4,9 +4,9 @@ import Characters from "./Characters";
 
 const CharactersList = (props) => {
 
-    const charactersElement = props.characters.map((person, index) => {
+    const charactersElement = props.characters.map((person) => {
         return (
-            <li className="card" key={index}>
+            <li className="card" key={person.id}>
                 <Characters person={person} />
             </li>
         );

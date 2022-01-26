@@ -12,9 +12,9 @@ const FilterHouse = (props) => {
             <label className="filterHouseTitle" htmlFor="house">Selecciona la casa</label>
             <select className="selectStyles" name="house" id="house" onChange={handleSelect} value={props.filterHouse}>
               <option value="gryffindor">Gryffindor</option>
+              <option value="slytherin">Slytherin</option>
               <option value="ravenclaw">Ravenclaw</option>
               <option value="hufflepuff">Hufflepuff</option>
-              <option value="slytherin">Slytherin</option>
             </select>
         </>
     );
