@@ -246,7 +246,7 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    background-size: 470px;
+    background-size: 420px;
     height: 55vh;
     display: flex;
     flex-direction: column;
@@ -258,9 +258,8 @@
             background-repeat: no-repeat;
             background-position-x: center;
             background-position-y: center;
-            background-size: 400px;
             height: 55vh;
-            background-size: 750px;
+            background-size: 570px;
         }
         @media (min-width: 1200px) {
             background: url('../images/paper-detail-x.png');
@@ -269,7 +268,7 @@
             background-position-y: center;
             background-size: 80px;
             height: 85vh;
-            background-size: 750px;
+            background-size: 620px;
         }
 }
 
