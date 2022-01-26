@@ -72,8 +72,11 @@ function App() {
       </Switch>
         </main>     
 
-      <footer>
-        <p>Made with ✨🔮 and ❤️, by &copy;María the wizard. 2022</p>
+      <footer className="footer">
+        <div className="divFooter">
+        <p>Made with ✨🔮 and ❤️,</p>
+        <p>by &copy;María, the wizard. 2022</p>
+        </div>
       </footer>
     </div>
   );
