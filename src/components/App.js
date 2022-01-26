@@ -1,5 +1,5 @@
 import "../styles/App.scss";
-import img from '../images/logo.png';
+import img from '../images/logo-white.png';
 import { useState, useEffect } from "react";
 import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import callToApi from "../services/api";

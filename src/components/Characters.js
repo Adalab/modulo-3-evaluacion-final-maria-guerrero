@@ -11,7 +11,7 @@ const Characters = (props) => {
     <Link to={`/character/${props.person.id}`}>
         <img
         className="imageStyles" 
-        src={props.person.image} 
+        src={props.person.image !== "" ? props.person.image : 'https://img.wallpapersafari.com/desktop/800/450/85/32/TZtkqg.png'} 
         alt={`Foto de ${props.person.name}`}
         title={`Foto de ${props.person.name}`}
         />

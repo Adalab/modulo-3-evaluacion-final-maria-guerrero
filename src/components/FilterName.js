@@ -9,12 +9,13 @@ const FilterName = (props) => {
 
     return (
         <>
-            <label htmlFor="name">Busca por personaje:</label>
+            <label className="inputTitleStyles" htmlFor="name">Search by character:</label>
             <input
             className="backgroundInput" 
             type="text" 
             name="name" 
             id="name"
+            placeholder="Ej: Albus Dumbledore"
             onChange={handleInputName}
             value={props.filterName} 
             />
