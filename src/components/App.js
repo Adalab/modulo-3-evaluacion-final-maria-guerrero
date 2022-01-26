@@ -1,5 +1,7 @@
 import "../styles/App.scss";
 import img from '../images/logo-white.png';
+import hedwig from '../images/hedwig.png';
+import hpotter from '../sound/background-sound.mp3';
 import { useState, useEffect } from "react";
 import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import callToApi from "../services/api";
@@ -42,12 +44,18 @@ function App() {
     const foundCharacterId = characters.find((character) => character.id === routeIdCharacter);
     return <CharacterDetail person={foundCharacterId} />
   };
-    
 
   return (
     <div>
       <header className="header">
-        <img className="logo" src={img} alt="" />
+        <div className="hpMusic">
+        <audio id="hpMusic" type="audio/mp3" controls autoPlay>
+          {" "}
+          <source src={hpotter} />
+        </audio>
+        </div>
+        <img className="logo" src={img} alt="Foto" />
+        <img className="hedwig" src={hedwig} alt="" />
       </header>
 
       <main className="main">

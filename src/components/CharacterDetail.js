@@ -12,7 +12,7 @@ const CharacterDetail = (props) => {
                 title={`Foto de ${props.person.name}`}
             />
             <h1>{props.person.name}</h1>
-            <p>State: {props.person.alive === 'false' ? 'Dead' : 'Alive'}</p>
+            <p>State: {props.person.alive === 'false' ? 'dead' : 'alive'}</p>
             <p>Specie: {props.person.species}</p>
             <p>Gender: {props.person.gender}</p>
             <p>Hogwarts house: {props.person.house}</p>
