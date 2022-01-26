@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.35ed9e9b.css",
+    "main.js": "./static/js/main.46e84c7a.js",
+    "static/media/paper-detail-x.png": "./static/media/paper-detail-x.a73ea1d2ae87c318fd8a.png",
+    "static/media/paper-detail-y.png": "./static/media/paper-detail-y.570ca92d8491e4f26fde.png",
+    "static/media/background-sound.mp3": "./static/media/background-sound.20b746e69725731c9a9c.mp3",
+    "static/media/paper.png": "./static/media/paper.5b1e6c1660734e930ad8.png",
+    "static/media/hedwig.png": "./static/media/hedwig.ae7533357db67b1c0d08.png",
+    "static/media/logo-white.png": "./static/media/logo-white.d1ac2012fdf065ee52a1.png",
+    "static/media/hogwarts-illus.jpg": "./static/media/hogwarts-illus.43b9446a9912977937e2.jpg",
+    "index.html": "./index.html",
+    "main.35ed9e9b.css.map": "./static/css/main.35ed9e9b.css.map",
+    "main.46e84c7a.js.map": "./static/js/main.46e84c7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35ed9e9b.css",
+    "static/js/main.46e84c7a.js"
+  ]
+}

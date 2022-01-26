@@ -1,12 +1,11 @@
 import "../styles/App.scss";
-import img from '../images/logo-white.png';
-import hedwig from '../images/hedwig.png';
-import hpotter from '../sound/background-sound.mp3';
 import { useState, useEffect } from "react";
 import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import callToApi from "../services/api";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
+import Header from "./Header";
+import Footer from "./Footer";
 import CharacterDetail from './CharacterDetail';
 
 function App() {
@@ -47,16 +46,7 @@ function App() {
 
   return (
     <div>
-      <header className="header">
-        <div className="hpMusic">
-        <audio id="hpMusic" type="audio/mp3" controls autoPlay>
-          {" "}
-          <source src={hpotter} />
-        </audio>
-        </div>
-        <img className="logo" src={img} alt="Foto" />
-        <img className="hedwig" src={hedwig} alt="" />
-      </header>
+      <Header />
 
       <main className="main">
       <Switch>
@@ -72,12 +62,7 @@ function App() {
       </Switch>
         </main>     
 
-      <footer className="footer">
-        <div className="divFooter">
-        <p>Made with ✨🔮 and ❤️,</p>
-        <p>by &copy;María, the wizard. 2022</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
