@@ -1,9 +1,18 @@
 import {Link} from 'react-router-dom';
+import GryffindorEmblem from '../images/gryffindor.png';
 
 const CharacterDetail = (props) => {
+
+    const emblemChange = () => {
+        if (props.person.house === 'gryffindor') {
+          return GryffindorEmblem;
+        }
+      }
+
     return (
         <>
         <section className="sectionDetailPage">
+        <img className="gryffindorEmblem" src={emblemChange()} alt="gryffindor" />
         <Link className="back" to="/">Back</Link>
                 <div className="divInfoDetail">
                 <img
